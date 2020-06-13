@@ -1,0 +1,7 @@
+node_modules/
+.cache/
+dist/
+
+app/imported.js
+.env
+*.log

@@ -1,0 +1,39 @@
+{
+  "name": "strimd",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "parcel app/index.html",
+    "build": "rm -rf dist && npm run build:imported && npm run build:client && npm run build:server",
+    "build:imported": "imported-components app app/imported.js",
+    "build:client": "BABEL_ENV=client parcel build app/index.html -d dist/client --public-url /dist --no-cache",
+    "build:server": "BABEL_ENV=server parcel build server/index.js -d dist/server --public-url /dist --target=node --no-minify --no-cache",
+    "prod": "node dist/server"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.6",
+    "react-hot-loader": "^4.12.21",
+    "react-imported-component": "^6.2.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-react": "7.8.3",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "eslint-config-xo": "^0.31.0",
+    "eslint-config-xo-react": "^0.23.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-manifest": "^0.2.0",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "xo": "^0.32.0"
+  }
+}

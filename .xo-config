@@ -1,0 +1,37 @@
+{
+  "semicolon": false,
+  "space": true,
+  "rules": {
+    "object-curly-spacing": [2, "always"],
+    "capitalized-comments": 0,
+    "react/jsx-tag-spacing": [2, {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never"
+    }],
+    "comma-dangle": [2, "always-multiline"],
+    "react/jsx-sort-props": 0,
+    "import/no-anonymous-default-export": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unassigned-import": 0,
+    "unicorn/no-reduce": 0,
+    "unicorn/filename-case": 0,
+    "unicorn/catch-error-name": 0,
+    "unicorn/prefer-query-selector": 0,
+    "unicorn/prevent-abbreviations": 0,
+    "func-names": 0
+  },
+  "extends": ["xo-react", "plugin:import/errors", "plugin:import/warnings"],
+  "env": ["node", "browser"],
+  "ignores": ["app/imported.js"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
+}
