@@ -13,7 +13,6 @@
 
 ### Ongoing
 
-- [ ] (High) Fix xo for ternaries
 - [ ] (High) Fix prettier jsx newlines annoyance
 - [ ] (Q) Should LazyBoundary, RecoilRoot, ThemeProvider, CookieProvider, WebFont strategy be provided out of the box? Or have docs/snippets?
 
